@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailash Nath | Visionary Video Editor & AI Ad Maker</title>
+    <meta name="description"
+        content="Portfolio of Kailash Nath - High-end Video Editor, Designer, and AI Ad Maker specializing in cinematic industrial aesthetics.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#050505',
+                            charcoal: '#121212',
+                            blue: '#00D1FF',
+                            neon: '#00F0FF',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-black text-white selection:bg-brand-blue selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-black tracking-tighter uppercase font-heading">
+                Kalox<span class="text-brand-blue">.</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-sm font-medium tracking-widest uppercase opacity-70">
+                <a href="#work" class="hover:text-brand-blue transition-colors">Work</a>
+                <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="#connect" class="hover:text-brand-blue transition-colors">Connect</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-brand-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Main Stage -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(0,209,255,0.1),transparent_50%)]">
+        </div>
+
+        <div class="max-w-6xl w-full z-10 space-y-8 animate-fade-in">
+            <div class="text-center space-y-2">
+                <h2 class="text-brand-blue font-bold tracking-[0.2em] uppercase text-xs">Visual Storyteller</h2>
+                <h1 class="text-5xl md:text-8xl font-black font-heading uppercase tracking-tighter leading-none">
+                    Kailash <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-white">Nath</span>
+                </h1>
+            </div>
+
+            <!-- The Main Stage Player -->
+            <div id="main-stage"
+                class="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                <video id="hero-video" class="w-full h-full object-cover" autoplay muted loop playsinline>
+                    <source
+                        src="https://res.cloudinary.com/dukm2ulm2/video/upload/v1778769356/YTDown_YouTube_Time-to-change-your-old-PC-PC-BUILDING-C_Media_UzjZoxYFdDQ_002_720p_l8c2kl.mp4"
+                        type="video/mp4">
+                </video>
+
+                <!-- Player Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <div class="glass-morphism p-6 rounded-xl flex items-center justify-between border border-white/20">
+                        <div>
+                            <h3 id="current-title" class="text-xl font-bold uppercase font-heading tracking-tight">PC
+                                Building Creative</h3>
+                            <p class="text-sm opacity-60">High-End Motion Design & Editing</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <button id="mute-btn"
+                                class="p-3 bg-white/10 rounded-full hover:bg-brand-blue/20 transition-all">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M5 9v6h4l5 5V4L9 9H5z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scanning Lines Effect -->
+                <div class="absolute inset-0 pointer-events-none scanning-lines opacity-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Reel Section -->
+    <section id="work" class="py-24 bg-brand-charcoal relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-2">Portfolio</h2>
+                    <h3 class="text-4xl md:text-6xl font-black uppercase font-heading leading-tight">The Work <span
+                            class="opacity-20 text-white">Reel</span></h3>
+                </div>
+                <p class="max-w-md text-white/50 text-right">Cinematic experiences crafted with precision, blending raw
+                    aesthetics with advanced AI generation and motion graphics.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Thumbnail 1 -->
+                <div class="work-card group cursor-pointer"
+                    onclick="switchVideo('https://res.cloudinary.com/dukm2ulm2/video/upload/v1778769356/YTDown_YouTube_Time-to-change-your-old-PC-PC-BUILDING-C_Media_UzjZoxYFdDQ_002_720p_l8c2kl.mp4', 'PC Building Creative')">
+                    <div
+                        class="relative aspect-video rounded-lg overflow-hidden border border-white/5 group-hover:border-brand-blue/50 transition-all duration-500">
+                        <video
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            muted loop onmouseover="this.play()" onmouseout="this.pause()">
+                            <source
+                                src="https://res.cloudinary.com/dukm2ulm2/video/upload/v1778769356/YTDown_YouTube_Time-to-change-your-old-PC-PC-BUILDING-C_Media_UzjZoxYFdDQ_002_720p_l8c2kl.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div
+                            class="absolute inset-0 bg-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h4
+                        class="mt-4 font-bold uppercase text-xs tracking-widest group-hover:text-brand-blue transition-colors">
+                        PC Building Creative</h4>
+                </div>
+
+                <!-- Thumbnail 2 -->
+                <div class="work-card group cursor-pointer"
+                    onclick="switchVideo('https://res.cloudinary.com/dukm2ulm2/video/upload/v1778769270/YTDown_YouTube_Laptop-Service-Commercial-Peoples-Electr_Media_dNADy2G7pE8_002_720p_hejgf8.mp4', 'Laptop Service Commercial')">
+                    <div
+                        class="relative aspect-video rounded-lg overflow-hidden border border-white/5 group-hover:border-brand-blue/50 transition-all duration-500">
+                        <video
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            muted loop onmouseover="this.play()" onmouseout="this.pause()">
+                            <source
+                                src="https://res.cloudinary.com/dukm2ulm2/video/upload/v1778769270/YTDown_YouTube_Laptop-Service-Commercial-Peoples-Electr_Media_dNADy2G7pE8_002_720p_hejgf8.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div
+                            class="absolute inset-0 bg-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h4
+                        class="mt-4 font-bold uppercase text-xs tracking-widest group-hover:text-brand-blue transition-colors">
+                        Laptop Service Commercial</h4>
+                </div>
+
+                <!-- Thumbnail 3 -->
+                <div class="work-card group cursor-pointer"
+                    onclick="switchVideo('https://res.cloudinary.com/dukm2ulm2/video/upload/v1778768943/EKHO_Episode-1_The_Rebirth._-_Kalox_-_GT_720p_h264_y6d1dq.mp4', 'EKHO: The Rebirth')">
+                    <div
+                        class="relative aspect-video rounded-lg overflow-hidden border border-white/5 group-hover:border-brand-blue/50 transition-all duration-500">
+                        <video
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            muted loop onmouseover="this.play()" onmouseout="this.pause()">
+                            <source
+                                src="https://res.cloudinary.com/dukm2ulm2/video/upload/v1778768943/EKHO_Episode-1_The_Rebirth._-_Kalox_-_GT_720p_h264_y6d1dq.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div
+                            class="absolute inset-0 bg-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h4
+                        class="mt-4 font-bold uppercase text-xs tracking-widest group-hover:text-brand-blue transition-colors">
+                        EKHO: The Rebirth</h4>
+                </div>
+
+                <!-- Thumbnail 4 -->
+                <div class="work-card group cursor-pointer"
+                    onclick="switchVideo('https://res.cloudinary.com/dukm2ulm2/video/upload/v1778768962/VID-20250130-WA0001_pdwnrr.mp4', 'Motion Asset (WA0001)')">
+                    <div
+                        class="relative aspect-video rounded-lg overflow-hidden border border-white/5 group-hover:border-brand-blue/50 transition-all duration-500">
+                        <video
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            muted loop onmouseover="this.play()" onmouseout="this.pause()">
+                            <source
+                                src="https://res.cloudinary.com/dukm2ulm2/video/upload/v1778768962/VID-20250130-WA0001_pdwnrr.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div
+                            class="absolute inset-0 bg-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h4
+                        class="mt-4 font-bold uppercase text-xs tracking-widest group-hover:text-brand-blue transition-colors">
+                        Motion Asset (WA0001)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative group">
+                <!-- Glitch Image Frame -->
+                <div class="relative z-10 rounded-2xl overflow-hidden border-2 border-brand-blue/30 glow-border">
+                    <img src="SharedScreenshot.jpg" alt="Kailash Nath"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-1000 glitch-image">
+                </div>
+                <div
+                    class="absolute -inset-4 bg-brand-blue/20 blur-3xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity duration-1000 -z-10">
+                </div>
+                <div class="absolute top-0 -right-4 w-24 h-24 border-r-4 border-t-4 border-brand-blue opacity-50"></div>
+                <div class="absolute bottom-0 -left-4 w-24 h-24 border-l-4 border-b-4 border-brand-blue opacity-50">
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-2">The Visionary</h2>
+                    <h3 class="text-4xl md:text-6xl font-black uppercase font-heading">Kailash Nath</h3>
+                </div>
+                <p class="text-lg text-white/70 leading-relaxed">
+                    A multi-disciplinary creator specialized in <span class="text-white font-bold">Video Editing,
+                        Design, and AI-Driven Advertising</span>. My work thrives at the intersection of cinematic
+                    industrial aesthetics and cutting-edge technology.
+                </p>
+                <div class="grid grid-cols-2 gap-8 py-8 border-y border-white/5">
+                    <div>
+                        <span class="block text-3xl font-black font-heading text-brand-blue">03+</span>
+                        <span class="text-xs uppercase tracking-widest opacity-50">Years Experience</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-black font-heading text-brand-blue">25+</span>
+                        <span class="text-xs uppercase tracking-widest opacity-50">Projects Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-brand-charcoal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-2">What I Do</h2>
+                <h3 class="text-4xl md:text-5xl font-black uppercase font-heading">Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="p-10 border border-white/5 bg-brand-black/50 hover:border-brand-blue/50 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-brand-blue/10 flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-black transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tight">Cinematic Video Editing</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">High-energy edits with precision pacing, sound
+                        design, and color grading tailored for luxury brands and tech.</p>
+                </div>
+
+                <div
+                    class="p-10 border border-white/5 bg-brand-black/50 hover:border-brand-blue/50 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-brand-blue/10 flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-black transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tight">AI Ad Creation</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Leveraging generative AI to create photorealistic
+                        products shots and surreal advertising concepts that convert.</p>
+                </div>
+
+                <div
+                    class="p-10 border border-white/5 bg-brand-black/50 hover:border-brand-blue/50 transition-all group">
+                    <div
+                        class="w-12 h-12 bg-brand-blue/10 flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-black transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tight">Industrial Motion Design</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Sleek, tech-focused motion assets and UI/UX
+                        animations that breathe life into digital interfaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-7xl font-black uppercase font-heading mb-12 leading-none">Ready to <span
+                    class="text-brand-blue">Innovate?</span></h2>
+            <div class="space-y-8">
+                <a href="https://www.instagram.com/real_kalox/" target="_blank" class="block group">
+                    <span
+                        class="inline-flex items-center gap-4 text-2xl font-bold border-b-2 border-brand-blue pb-2 group-hover:text-brand-blue transition-all">
+                        Follow the Journey @real_kalox
+                        <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </span>
+                </a>
+                <p class="text-white/40 uppercase tracking-[0.5em] text-xs">Let's build the future together</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-xs uppercase tracking-widest opacity-40">
+            Kailash Nath | Visionary Content Creator © 2026
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

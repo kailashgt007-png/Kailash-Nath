@@ -1,0 +1,109 @@
+/* Custom Styles for Kailash Nath Portfolio */
+
+:root {
+    --brand-blue: #00D1FF;
+    --brand-black: #050505;
+    --brand-charcoal: #121212;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Glassmorphism */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Scanning Lines Effect */
+.scanning-lines {
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Glitch Effect on Hover for Image */
+.glitch-image {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.glow-border {
+    box-shadow: 0 0 20px rgba(0, 209, 255, 0.1);
+    transition: box-shadow 0.5s ease;
+}
+
+.group:hover .glow-border {
+    box-shadow: 0 0 40px rgba(0, 209, 255, 0.3);
+}
+
+/* Custom Video Player Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Work Card Hover */
+.work-card:hover h4 {
+    letter-spacing: 0.2em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--brand-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-blue);
+}
+
+/* Glitch Animation (Optional enhancement) */
+@keyframes glitch {
+    0% { clip: rect(44px, 9999px, 56px, 0); }
+    20% { clip: rect(12px, 9999px, 88px, 0); }
+    40% { clip: rect(67px, 9999px, 34px, 0); }
+    60% { clip: rect(23px, 9999px, 78px, 0); }
+    80% { clip: rect(98px, 9999px, 12px, 0); }
+    100% { clip: rect(45px, 9999px, 90px, 0); }
+}
+
+/* Smooth Video Switching Transition */
+#hero-video {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.video-fade-out {
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scanning-lines {
+        background-size: 100% 2px;
+    }
+}
